@@ -7,6 +7,10 @@ const config: Config = {
     "./src/styles/**/*.{css,scss}",
   ],
   theme: {
+    colors: {
+      'custom-red': '#e11d48',
+      'custom-blue': '#1fb6ff',
+    },
     extend: {
       container: {
         center: true,

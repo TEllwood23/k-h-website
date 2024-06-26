@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Container from '../components/Container';
 import { fetchData } from '../services/api';
+import LinksBar from '../components/LinksBar';
 
 interface DataItem {
   id: number;
@@ -32,17 +33,18 @@ const HomePage = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <Container bgColor="bg-blue-100">
-      <h1>Welcome to My Next.js App</h1>
-      <p>This is the homepage.</p>
-      <div>
-        <h2>Fetched Data:</h2>
-        {Array.isArray(data) && data.map((item) => (
-          <div key={item.id}>
-            <p>{item.name}</p>
-            {/* Display other fields as needed */}
-          </div>
-        ))}
+    <Container bgColor="bg-blue-500">
+      <div className="container mx-auto px-4 border-2 border-gray-400 rounded-lg p-4 ">
+        <LinksBar />
+        <div>
+          <h2>Fetched Data:</h2>
+          {Array.isArray(data) && data.map((item) => (
+            <div key={item.id}>
+              <p>{item.name}</p>
+              {/* Display other fields as needed */}
+            </div>
+          ))}
+        </div>
       </div>
     </Container>
   );

@@ -6,7 +6,7 @@ interface ContainerProps {
   bgColor?: string;
 }
 
-const Container = ({ children, bgColor = 'bg-blue-200' }: ContainerProps) => {
+const Container = ({ children, bgColor = 'bg-blue-500' }: ContainerProps) => {
   return <div className={`container mx-auto px-4 ${bgColor}`}>{children}</div>;
 };
 
